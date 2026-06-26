@@ -275,11 +275,10 @@ strong {
   }
 
   .stores {
-    position: absolute;
-    left: 76px;
-    bottom: 71px;
+    position: relative;
     z-index: 3;
-    max-width: 690px;
+    max-width: 72%;
+    margin: 78px 0 0;
     font-size: clamp(21px, 3.18vw, 38px);
     line-height: 1.1;
     font-weight: 800;
@@ -287,12 +286,12 @@ strong {
   }
 
   .logo-fnac {
-    position: absolute;
-    right: 74px;
-    bottom: 83px;
+    position: relative;
     z-index: 1;
+    display: block;
     width: clamp(150px, 19.2vw, 236px);
     height: clamp(150px, 19.2vw, 236px);
+    margin: -80px 0 0 auto;
     object-fit: contain;
     transform: rotate(8deg);
     user-select: none;
@@ -324,16 +323,14 @@ strong {
   }
 
   .stores {
-    left: 25px;
-    bottom: 34px;
-    max-width: 58vw;
+    max-width: 70%;
+    margin-top: 46px;
     font-size: 3.45vw;
   }
 
   .logo-fnac {
-    right: 25px;
-    bottom: 38px;
     width: 23vw;
     height: 23vw;
+    margin-top: -48px;
   }
 }
