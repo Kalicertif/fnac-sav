@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --fnac-yellow: #efb514;
+  --text: #000;
+  --font-main: "Baloo 2", Arial, Helvetica, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  background: var(--fnac-yellow);
+}
+
+body {
+  color: var(--text);
+  font-family: var(--font-main);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sav-page {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--fnac-yellow);
+}
+
+.notice {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+}
+
+h1,
+p {
+  margin: 0;
+}
+
+strong {
+  font-weight: 800;
+}
+
+/* ===============================
+   DESKTOP — visuel SAV DESTOCK
+   Ratio de référence : 2048 × 640
+   =============================== */
+@media (min-width: 769px) {
+  .sav-page {
+    min-height: 640px;
+    height: 100vh;
+    max-height: 640px;
+    padding: 37px 38px 26px;
+  }
+
+  .notice {
+    padding-top: 0;
+  }
+
+  h1 {
+    font-size: 38px;
+    line-height: 0.95;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .intro {
+    max-width: 1735px;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 400;
+  }
+
+  .instructions {
+    margin-top: 27px;
+  }
+
+  .instructions p {
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 400;
+  }
+
+  .hours {
+    margin-top: 5px;
+  }
+
+  .hours p {
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 800;
+  }
+
+  .conditions {
+    margin-top: 37px;
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 400;
+  }
+
+  .pdf-link {
+    display: inline-block;
+    margin-top: 2px;
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 800;
+  }
+
+  .closing {
+    margin-top: 37px;
+    font-size: 25px;
+    line-height: 1.05;
+    font-weight: 400;
+  }
+
+  .stores {
+    position: absolute;
+    left: 38px;
+    bottom: 38px;
+    z-index: 3;
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 800;
+    white-space: nowrap;
+    text-align: left;
+  }
+
+  .logo-fnac {
+    position: absolute;
+    right: 58px;
+    bottom: 39px;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transform: rotate(8deg);
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+/* Desktop fluide sous 2048px */
+@media (min-width: 769px) and (max-width: 1600px) {
+  .sav-page {
+    height: 100vh;
+    max-height: none;
+    min-height: 560px;
+    padding: 30px 30px 24px;
+  }
+
+  h1 {
+    font-size: clamp(30px, 2.1vw, 38px);
+    margin-bottom: 2.1vw;
+  }
+
+  .intro,
+  .instructions p,
+  .conditions,
+  .pdf-link,
+  .closing {
+    font-size: clamp(18px, 1.25vw, 25px);
+  }
+
+  .hours p {
+    font-size: clamp(18px, 1.28vw, 25px);
+  }
+
+  .instructions {
+    margin-top: 1.8vw;
+  }
+
+  .conditions {
+    margin-top: 2.6vw;
+  }
+
+  .closing {
+    margin-top: 2.4vw;
+  }
+
+  .stores {
+    font-size: clamp(14px, 1vw, 20px);
+    left: 30px;
+    bottom: 30px;
+  }
+
+  .logo-fnac {
+    width: clamp(105px, 7.5vw, 150px);
+    height: clamp(105px, 7.5vw, 150px);
+    right: 4vw;
+    bottom: 30px;
+  }
+}
+
+/* ===============================
+   MOBILE — visuel SAV MOBILE FNAC2
+   Ratio de référence : 1228 × 2048
+   =============================== */
+@media (max-width: 768px) {
+  .sav-page {
+    min-height: 100vh;
+    padding: 62px 76px 70px;
+  }
+
+  h1 {
+    font-size: clamp(54px, 10.9vw, 92px);
+    line-height: 0.92;
+    font-weight: 800;
+    margin-bottom: 55px;
+  }
+
+  .intro {
+    max-width: 1080px;
+    margin: 0 auto;
+    font-size: clamp(35px, 5.55vw, 65px);
+    line-height: 1.1;
+    font-weight: 400;
+  }
+
+  .instructions {
+    margin-top: 59px;
+  }
+
+  .instructions p {
+    font-size: clamp(34px, 5.3vw, 62px);
+    line-height: 1.08;
+    font-weight: 400;
+  }
+
+  .instructions p + p {
+    margin-top: 12px;
+  }
+
+  .hours {
+    margin-top: 10px;
+  }
+
+  .hours p {
+    font-size: clamp(34px, 5.35vw, 63px);
+    line-height: 1.03;
+    font-weight: 800;
+  }
+
+  .conditions {
+    margin-top: 68px;
+    font-size: clamp(34px, 5.3vw, 62px);
+    line-height: 1.08;
+    font-weight: 400;
+  }
+
+  .pdf-link {
+    display: block;
+    margin-top: 4px;
+    font-size: clamp(34px, 5.3vw, 62px);
+    line-height: 1.05;
+    font-weight: 800;
+    word-break: break-word;
+  }
+
+  .closing {
+    margin-top: 76px;
+    font-size: clamp(34px, 5.3vw, 62px);
+    line-height: 1.08;
+    font-weight: 400;
+  }
+
+  .stores {
+    position: absolute;
+    left: 76px;
+    bottom: 71px;
+    z-index: 3;
+    max-width: 690px;
+    font-size: clamp(21px, 3.18vw, 38px);
+    line-height: 1.1;
+    font-weight: 800;
+    text-align: left;
+  }
+
+  .logo-fnac {
+    position: absolute;
+    right: 74px;
+    bottom: 83px;
+    z-index: 1;
+    width: clamp(150px, 19.2vw, 236px);
+    height: clamp(150px, 19.2vw, 236px);
+    object-fit: contain;
+    transform: rotate(8deg);
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+/* Très petits téléphones */
+@media (max-width: 430px) {
+  .sav-page {
+    padding: 40px 25px 42px;
+  }
+
+  h1 {
+    font-size: 13vw;
+    margin-bottom: 38px;
+  }
+
+  .intro,
+  .instructions p,
+  .conditions,
+  .pdf-link,
+  .closing {
+    font-size: 6.1vw;
+  }
+
+  .hours p {
+    font-size: 6.25vw;
+  }
+
+  .stores {
+    left: 25px;
+    bottom: 34px;
+    max-width: 58vw;
+    font-size: 3.45vw;
+  }
+
+  .logo-fnac {
+    right: 25px;
+    bottom: 38px;
+    width: 23vw;
+    height: 23vw;
+  }
+}
